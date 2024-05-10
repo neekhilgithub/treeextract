@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM Image Segmentation</title>
+</head>
+<body>
+    <h1>SAM Image Segmentation</h1>
+    <form action="/process" method="post">
+        <label for="image_path">Enter the path to the input image:</label><br>
+        <input type="text" id="image_path" name="image_path" required><br><br>
+        <label for="text_prompt">Enter the text prompt:</label><br>
+        <input type="text" id="text_prompt" name="text_prompt"><br><br>
+        <label for="box_threshold">Enter the box threshold (float):</label><br>
+        <input type="number" id="box_threshold" name="box_threshold" step="0.01" required><br><br>
+        <label for="text_threshold">Enter the text threshold (float):</label><br>
+        <input type="number" id="text_threshold" name="text_threshold" step="0.01" required><br><br>
+        <label for="raster_filename">Enter output filename for raster (without extension):</label><br>
+        <input type="text" id="raster_filename" name="raster_filename"><br><br>
+        <label for="vector_filename">Enter output filename for vector (without extension):</label><br>
+        <input type="text" id="vector_filename" name="vector_filename"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
